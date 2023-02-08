@@ -48,4 +48,9 @@ public class PlanificacioncursoController {
     public List<Planificacioncurso> findByName(@PathVariable String term){
         return planificacioncursoService.findByName(term);
     }
+
+    @GetMapping("/findBySchoolPeriod/{term}")
+    public List<Planificacioncurso> findBySchoolPeriod(@PathVariable String term){
+        return planificacioncursoService.findBySchoolPeriod(term);
+    }
 }

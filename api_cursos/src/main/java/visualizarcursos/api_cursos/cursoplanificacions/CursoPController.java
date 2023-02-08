@@ -49,4 +49,9 @@ public class CursoPController {
     public List<CursoDTO> findByName(@PathVariable String term){
         return cursoclient.findByName(term);
     }
+
+    @GetMapping("/findBySchoolPeriod/{term}")
+    public List<CursoDTO> findBySchoolPeriod(@PathVariable String term){
+        return cursoclient.findBySchoolPeriod(term);
+    }
 }

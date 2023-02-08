@@ -31,4 +31,7 @@ public interface CursoClient {
 
     @GetMapping("/findByName/{term}")
     List <CursoDTO> findByName(@PathVariable("term") String term);
+
+    @GetMapping("/findBySchoolPeriod/{term}")
+    List <CursoDTO> findBySchoolPeriod(@PathVariable("term") String term);
 }

@@ -8,5 +8,6 @@ public interface PlanificacioncursoRepository extends JpaRepository<Planificacio
 
     public List<Planificacioncurso> findAll();
     public List<Planificacioncurso> findByNameLikeIgnoreCase(String term);
+    public List<Planificacioncurso> findBySchoolPeriodLikeIgnoreCase(String term);
     
 }

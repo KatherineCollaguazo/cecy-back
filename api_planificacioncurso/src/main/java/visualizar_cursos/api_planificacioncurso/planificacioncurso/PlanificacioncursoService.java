@@ -27,4 +27,8 @@ public class PlanificacioncursoService {
     public List<Planificacioncurso> findByName(String term){
         return planificacioncursoRepository.findByNameLikeIgnoreCase(term+"%");
     }
+
+    public List<Planificacioncurso> findBySchoolPeriod(String term){
+        return planificacioncursoRepository.findBySchoolPeriodLikeIgnoreCase(term+"%");
+    }
 }
