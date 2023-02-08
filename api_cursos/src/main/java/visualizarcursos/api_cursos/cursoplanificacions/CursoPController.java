@@ -44,4 +44,9 @@ public class CursoPController {
     public CursoDTO update(@PathVariable Long id, @RequestBody CursoDTO entity) {
         return cursoclient.update(id, entity);
     }
+
+    @GetMapping("/findByName/{term}")
+    public List<CursoDTO> findByName(@PathVariable String term){
+        return cursoclient.findByName(term);
+    }
 }

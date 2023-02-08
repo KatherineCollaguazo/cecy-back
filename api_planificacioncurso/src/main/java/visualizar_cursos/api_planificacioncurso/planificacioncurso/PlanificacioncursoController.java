@@ -43,4 +43,9 @@ public class PlanificacioncursoController {
     public void deleteById(@PathVariable Long id){
         planificacioncursoService.deleteById(id);
     }
+
+    @GetMapping("/findByName/{term}")
+    public List<Planificacioncurso> findByName(@PathVariable String term){
+        return planificacioncursoService.findByName(term);
+    }
 }

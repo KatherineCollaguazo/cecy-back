@@ -28,4 +28,7 @@ public interface CursoClient {
 
     @PutMapping("/{id}/")
     CursoDTO update(@PathVariable("id") Long id, CursoDTO entity);
+
+    @GetMapping("/findByName/{term}")
+    List <CursoDTO> findByName(@PathVariable("term") String term);
 }

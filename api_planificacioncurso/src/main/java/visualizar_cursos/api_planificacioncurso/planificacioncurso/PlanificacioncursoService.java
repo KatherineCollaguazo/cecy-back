@@ -23,4 +23,8 @@ public class PlanificacioncursoService {
     public List<Planificacioncurso> findAll(){
         return planificacioncursoRepository.findAll();
     }
+
+    public List<Planificacioncurso> findByName(String term){
+        return planificacioncursoRepository.findByNameLikeIgnoreCase(term+"%");
+    }
 }
